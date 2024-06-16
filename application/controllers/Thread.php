@@ -22,4 +22,18 @@ class Thread extends CI_Controller
     $this->thread_model->post_thread($data);
     header('Location: /');
   }
+
+  public function view($id)
+  {
+    $thread = $this->thread_model->get_one_thread($id);
+    $posts = $this->post_model->get_posts($id);
+
+    // $data = ['thread' => $thread, 'posts' => $posts];
+    $data['thread'] = $thread;
+    $data['posts'] = $posts;
+
+    $this->load->view('templates/header');
+    $this->load->view('thread/thread_view', $data);
+    $this->load->view('templates/footer');
+  }
 }

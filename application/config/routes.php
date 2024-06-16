@@ -50,6 +50,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+$route['view/(:any)'] = 'thread/view/$1';
 $route['create'] = 'thread/create';
 $route['(:any)'] = 'forum/$1';
 $route['default_controller'] = 'Forum';
