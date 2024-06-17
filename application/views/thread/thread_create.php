@@ -1,3 +1,5 @@
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/application/helpers/session_check.php'); ?>
+
 <h3>Create a new thread</h3>
 <?php echo validation_errors(); ?>
 <?php echo form_open('thread/create'); ?>

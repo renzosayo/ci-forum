@@ -1,8 +1,9 @@
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/application/helpers/session_check.php'); ?>
+
 <div class="">
   <h1>Welcome to the Forum!</h1>
   <p>Keep it clean and civilized!</p>
 </div>
-
 
 <a href="create" class="btn btn-primary mt-4">Create thread</a>
 <?php foreach ($result as $thread) : ?>

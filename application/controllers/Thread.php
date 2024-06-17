@@ -14,7 +14,7 @@ class Thread extends CI_Controller
     }
 
     $data = [
-      'user_id' => 1,
+      'user_id' => $_SESSION['user_id'],
       'title' => $this->input->post('title'),
       'body' => $this->input->post('body')
     ];
@@ -28,7 +28,6 @@ class Thread extends CI_Controller
     $thread = $this->thread_model->get_one_thread($id);
     $posts = $this->post_model->get_posts($id);
 
-    // $data = ['thread' => $thread, 'posts' => $posts];
     $data['thread'] = $thread;
     $data['posts'] = $posts;
 

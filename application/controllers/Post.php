@@ -6,7 +6,7 @@ class Post extends CI_Controller
   {
     $data = [
       'thread_id' => $this->input->post('thread_id'),
-      'poster_id' => $this->input->post('poster_id'),
+      'poster_id' => $_SESSION['user_id'],
       'body' => $this->input->post('body'),
     ];
 

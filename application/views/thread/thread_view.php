@@ -1,3 +1,5 @@
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/application/helpers/session_check.php'); ?>
+
 <div class="thread mb-5">
   <h1><?= $thread['title']; ?></h1>
   <p class=""><?= $thread['body']; ?></p>
@@ -26,7 +28,7 @@
     'post/create',
     '',
     // temporary poster_id, should come from session
-    ['thread_id' => $thread['id'], 'poster_id' => 1]
+    ['thread_id' => $thread['id']]
   );
   ?>
   <div class="form-group">
